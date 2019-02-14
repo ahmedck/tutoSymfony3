@@ -1,8 +1,8 @@
 oxygene
 =======
 
-1/ Creation de la BD "oxygene"
-Importer le script "db.sql" via phpmyadmin
+1/ Création de la BD "oxygene"
+Importer le script "db.sql" via phpmyadmin , ça permet de créer les tables et la structure de la BD.
 
 
 2/ Lancer la commande  : composer install
