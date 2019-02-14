@@ -1,4 +1,6 @@
 oxygene
 =======
 
-A Symfony project created on February 11, 2018, 9:17 am.
+
+1/ Lancer la commande  : composer install
+2/ Ensuite : php bin/console server:run
