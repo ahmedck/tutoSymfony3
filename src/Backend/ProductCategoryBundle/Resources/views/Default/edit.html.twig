@@ -1,0 +1,17 @@
+{% extends 'backend.html.twig' %}
+
+{% block body %}
+    <h2 class="mb-5">{% trans %}EDIT_CATEGORY{% endtrans %}</h2>
+
+
+    <form class="col-md-5" action="{{ path('backend_product_category_edit' , {'idProductCategory': category.idProductCategory } ) }}" method="post">
+        <div class="form-group">
+            <label>{% trans %}CATEGORY{% endtrans %}</label>
+            <input type="text" name="category" class="form-control" value="{{ category.category }}"  placeholder="Catégorie">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="{% trans %}SUBMIT{% endtrans %}" class=" btn btn-primary">
+        </div>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+        <nav class="nav float-right">
+            <ul class="nav nav-pills ">
+                <li role="presentation">
+                    <a class="nav-link {% if app.request.attributes.get('_route')=='homepage'  %}active{% endif %}" href="{{ path('homepage') }}">Home</a>
+                </li>
+                <li role="presentation">
+                    <a class="nav-link  {% if app.request.attributes.get('_route')=='route_about'  %}active{% endif %}" href="{{ path('route_about') }}">About</a>
+                </li>
+                <li role="presentation" >
+                    <a  class="nav-link  {% if app.request.attributes.get('_route')=='route_contact'  %}active{% endif %}" href="{{ path('route_contact') }}">Contact</a>
+                </li>
+            </ul>
+        </nav>

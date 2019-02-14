@@ -1,0 +1,19 @@
+backend_user_homepage:
+    path:     /
+    defaults: { _controller: BackendUserBundle:Default:index }
+
+backend_user_add:
+    path:     /add
+    defaults: { _controller: BackendUserBundle:Default:add }
+
+backend_user_edit:
+    path:     /edit/{idUser}
+    defaults: { _controller: BackendUserBundle:Default:edit }
+    requirements:
+        idUser: '\d+'
+
+backend_user_delete:
+    path:     /delete/{idUser}
+    defaults: { _controller: BackendUserBundle:Default:delete }
+    requirements:
+        idUser: '\d+'

@@ -1,0 +1,131 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Administration</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/css/dashboard.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+<nav class="navbar sticky-top bg-dark flex-md-nowrap p-0 ">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">{% trans %}BACKEND{% endtrans %}</a>
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            <a class="nav-link" href="{{ path('logout') }}">{% trans %}SIGN_OUT{% endtrans %}</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar mt-5">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+
+                    <li class="nav-item">
+                        <a class="nav-link {%  if app.request.attributes.get('_route') starts with  'backend_dashboard' %}active{% endif %}" href="{{ path('backend_dashboard_homepage') }}">
+                            <span data-feather="file"></span>
+                            {% trans %}DASHBOARD{% endtrans %} <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {%  if   (app.request.attributes.get('_route')  starts with 'backend_product') and  not(app.request.attributes.get('_route')  starts with 'backend_product_category')  %}active{% endif %}"  href="{{ path('backend_product_homepage') }}">
+                            <span data-feather="file"></span>
+                            {% trans %}PRODUCTS{% endtrans %} <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {%  if app.request.attributes.get('_route')  starts with 'backend_product_category' %}active{% endif %}"   href="{{ path('backend_product_category_homepage') }}">
+                            <span data-feather="home"></span>
+                            {% trans %}CATEGORIES{% endtrans %}
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {%  if app.request.attributes.get('_route') starts with  'backend_user' %}active{% endif %}"   href="{{ path('backend_user_homepage') }}">
+                            <span data-feather="home"></span>
+                            {% trans %}USERS{% endtrans %}
+                        </a>
+                    </li>
+
+
+
+                </ul>
+
+                <div class="row">
+
+                    <select onchange="changeLanguage(this.value);" class=" mt-5  mx-auto" >
+                        <option value="fr" {% if app.request.getLocale() == "fr" %}selected{% endif
+                        %}>Français</option>
+                        <option value="en" {% if app.request.getLocale() == "en" %}selected{% endif
+                        %}>Anglais</option>
+                        <option value="ar" {% if app.request.getLocale() == "ar" %}selected{% endif
+                        %}>العربية</option>
+                    </select>
+                    <script>
+                        function changeLanguage(newLang){
+                            var xhttp = new XMLHttpRequest();
+                            xhttp.open("POST", "/changeLanguage/"+newLang , true);
+                            xhttp.onload = function (e) {
+                                if (xhttp.readyState === 4) {
+                                    if (xhttp.status === 200) {
+                                        document.location.reload() ;
+                                    } else {
+                                        console.error(xhr.statusText);
+                                    }
+                                }
+                            };
+                            xhttp.onerror = function (e) {
+                                console.error(xhr.statusText);
+                            };
+                            xhttp.send();
+                        }
+                    </script>
+
+
+                </div>
+            </div>
+
+        </nav>
+
+
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
+            {% for message in app.flashes('error') %}
+                <div class="alert alert-danger" role="alert">{{ message }}</div>
+            {% endfor %}
+
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success" role="alert">{{ message }}</div>
+            {% endfor %}
+
+            {% block body %}{% endblock %}
+
+        </main>
+
+
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

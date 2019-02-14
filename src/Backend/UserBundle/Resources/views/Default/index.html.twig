@@ -1,0 +1,66 @@
+{% extends 'backend.html.twig' %}
+
+{% block body %}
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 ">
+        <h1>{% trans %}USERS{% endtrans %}</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+
+            <a  class="btn btn-primary" href="{{ path('backend_user_add') }}">
+                <span class="glyphicon glyphicon-plus"></span>
+                {% trans %}ADD{% endtrans %}
+            </a>
+
+        </div>
+    </div>
+
+    <div class="table-responsive mt-5">
+        <table class="table table-striped table-sm">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th width="20" ></th>
+                <th>{% trans %}FULLNAME{% endtrans %}</th>
+                <th>{% trans %}EMAIL{% endtrans %}</th>
+                <th>{% trans %}ROLE{% endtrans %}</th>
+                <th>{% trans %}ACTIONS{% endtrans %}</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.idUser }}</td>
+                    <td align="center">
+                        {% if user.hasPhoto() %}
+                           <img src="/img/users/{{ user.idUser }}.jpg" style="max-height: 50px;" />
+                        {% else %}
+                            <img src="/img/unknown_user.jpg" style="max-height: 50px;" />
+                        {% endif %}
+                    </td>
+                    <td>{{ user.fullname }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.role|trans }}</td>
+                    <td>
+                        <a href="{{ path('backend_user_edit' , {'idUser': user.idUser } ) }}">
+                            <i class="fas fa-pencil-alt"></i>
+                        </a>&nbsp;&nbsp;
+                        <a href="{{ path('backend_user_delete' , {'idUser': user.idUser } ) }}">
+                            <i class="fas  fa-trash-alt"></i>
+                        </a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="6" class="text-center">{% trans %}NO_RESULT{% endtrans %}</td>
+                </tr>
+            {% endfor %}
+
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+{% endblock %}

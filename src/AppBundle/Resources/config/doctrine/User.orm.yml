@@ -1,0 +1,43 @@
+AppBundle\Entity\User:
+    type: entity
+    table: user
+    uniqueConstraints:
+        email:
+            columns:
+                - email
+    id:
+        idUser:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_user
+            generator:
+                strategy: IDENTITY
+    fields:
+        fullname:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        email:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        password:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        role:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

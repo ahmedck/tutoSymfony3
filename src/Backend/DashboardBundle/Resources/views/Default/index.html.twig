@@ -1,0 +1,83 @@
+{% extends 'backend.html.twig' %}
+
+{% block body %}
+    <h1>{% trans %}DASHBOARD{% endtrans %}</h1>
+
+
+    <div class="col-md-12 mt-5">
+
+
+
+        <div class="m-3 float-left p-xl-3" >
+            <div class="panel bg-info text-white p-xl-3 " >
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <i class="fa fa-shopping-cart fa-5x text-white"></i>
+                        </div>
+                        <div class="col-lg-9 text-right">
+                            <div style="font-size:40px;">124</div>
+                            <div>{% trans %}NUMBER_OF_PRODUCTS{% endtrans %}</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/backend/product" class="text-light">
+                    <div class="panel-footer">
+                        <span class="pull-left">{% trans %}VIEW_DETAILS{% endtrans %}</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class=" m-3 float-left p-xl-3" >
+            <div class="panel bg-info text-white p-xl-3 " >
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <i class="fa fa-th-large fa-5x text-white"></i>
+                        </div>
+                        <div class="col-lg-9 text-right">
+                            <div style="font-size:40px;">{{ categoryService.countAll() }}</div>
+                            <div>{% trans %}NUMBER_OF_CATEGORIES{% endtrans %}</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/backend/product" class="text-light">
+                    <div class="panel-footer">
+                        <span class="pull-left">{% trans %}VIEW_DETAILS{% endtrans %}</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <div class=" m-3 float-left p-xl-3">
+            <div class="panel bg-info text-white p-xl-3 " >
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <i class="fa fa-users fa-5x text-white"></i>
+                        </div>
+                        <div class="col-lg-9 text-right">
+                            <div style="font-size:40px;">124</div>
+                            <div>{% trans %}NUMBER_OF_USERS{% endtrans %}</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/backend/product" class="text-light">
+                    <div class="panel-footer">
+                        <span class="pull-left">{% trans %}VIEW_DETAILS{% endtrans %}</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file source-language="EN" target-language="fr" datatype="plaintext" original="file.ext">
+<body>
+      <trans-unit id="USER">
+        <source>USERS</source>
+        <target>المستخدمين</target>
+     </trans-unit>
+      <trans-unit id="FULLNAME">
+        <source>FULLNAME</source>
+        <target>الاسم الكامل</target>
+     </trans-unit>
+      <trans-unit id="EMAIL">
+        <source>EMAIL</source>
+        <target>البريد الإلكتروني</target>
+     </trans-unit>
+      <trans-unit id="ROLE">
+        <source>ROLE</source>
+        <target>دور</target>
+     </trans-unit>
+      <trans-unit id="PASSWORD">
+        <source>PASSWORD</source>
+        <target>كلمة المرور</target>
+     </trans-unit>
+      <trans-unit id="CONFIRMATION_PASSWORD">
+        <source>CONFIRMATION_PASSWORD</source>
+        <target>تأكيد كلمة المرور</target>
+     </trans-unit>
+      <trans-unit id="PHOTO">
+        <source>PHOTO</source>
+        <target>صورة</target>
+     </trans-unit>
+      <trans-unit id="ADD_USER">
+        <source>ADD_USER</source>
+        <target>إضافة مستخدم</target>
+     </trans-unit>
+      <trans-unit id="EDIT_USER">
+        <source>EDIT_USER</source>
+        <target>تغيير مستخدم</target>
+     </trans-unit>
+</body>
+</file>
+</xliff>

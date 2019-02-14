@@ -1,0 +1,50 @@
+AppBundle\Entity\Product:
+    type: entity
+    table: product
+    indexes:
+        id_product_category:
+            columns:
+                - id_product_category
+        id_product_category_2:
+            columns:
+                - id_product_category
+    id:
+        idProduct:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_product
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        description:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        price:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+    manyToOne:
+        idProductCategory:
+            targetEntity: ProductCategory
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_product_category:
+                    referencedColumnName: id_product_category
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

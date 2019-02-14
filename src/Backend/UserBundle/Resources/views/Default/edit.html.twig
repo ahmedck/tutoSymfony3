@@ -1,0 +1,45 @@
+{% extends 'backend.html.twig' %}
+
+{% block body %}
+    <h2 class="mb-5">{% trans %}EDIT_USER{% endtrans %}</h2>
+
+
+    <form class="col-md-5" action="{{ path('backend_user_edit' , {'idUser': user.idUser } ) }}" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>{% trans %}FULLNAME{% endtrans %}</label>
+            <input type="text" name="fullname" class="form-control" value="{{ user.fullname }}"  >
+        </div>
+        <div class="form-group">
+            <label>{% trans %}EMAIL{% endtrans %}</label>
+            <input type="email" name="email" class="form-control" value="{{ user.email }}"  >
+        </div>
+        <div class="form-group">
+            <label>{% trans %}PASSWORD{% endtrans %}</label>
+            <input type="password" name="password" class="form-control" value="{{ user.password }}"  >
+        </div>
+        <div class="form-group">
+            <label>{% trans %}CONFIRMATION_PASSWORD{% endtrans %}</label>
+            <input type="password" name="repassword" class="form-control" value="{{ user.password }}"  >
+        </div>
+        <div class="form-group">
+            <label>{% trans %}ROLE{% endtrans %}</label>
+            <select name="role" class="form-control"  placeholder="Rôle">
+                <option value="ADMIN">{% trans %}ADMIN{% endtrans %}</option>
+                <option value="SIMPLE">{% trans %}SIMPLE{% endtrans %}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>{% trans %}PHOTO{% endtrans %}</label>
+            <input type="file" accept="image/jpeg" name="photo" class="form-control" >
+            {% if user.hasPhoto() %}
+                <img src="/img/users/{{ user.idUser }}.jpg" style="max-height: 50px;" />
+            {% else %}
+                <img src="/img/unknown_user.jpg" style="max-height: 50px;" />
+            {% endif %}
+        </div>
+        <div class="form-group">
+            <input type="submit" value="{% trans %}SUBMIT{% endtrans %}" class=" btn btn-primary">
+        </div>
+    </form>
+
+{% endblock %}

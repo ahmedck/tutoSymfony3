@@ -1,0 +1,8 @@
+services:
+#    backend_product_category.example:
+#        class: Backend\ProductCategoryBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    backend_product_category_service:
+        class: Backend\ProductCategoryBundle\Service\CategoryService
+        public: true
+        arguments: ['@doctrine']

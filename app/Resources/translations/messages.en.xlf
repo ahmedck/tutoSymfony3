@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file source-language="EN" target-language="en" datatype="plaintext" original="file.ext">  
+<body>
+     <trans-unit id="BACKEND">
+        <source>BACKEND</source>
+        <target>Backend</target>
+     </trans-unit>
+     <trans-unit id="SIGN_OUT">
+        <source>SIGN_OUT</source>
+        <target>Sign out</target>
+     </trans-unit>
+      <trans-unit id="OPERATION_FAILED">
+        <source>OPERATION_FAILED</source>
+        <target>Operation failed</target>
+      </trans-unit>
+     <trans-unit id="OPERATION_DONE">
+        <source>OPERATION_DONE</source>
+        <target>Operation successful</target>
+     </trans-unit>
+     <trans-unit id="ADD">
+        <source>ADD</source>
+        <target>Add</target>
+     </trans-unit>
+     <trans-unit id="ACTIONS">
+        <source>ACTIONS</source>
+        <target>Actions</target>
+     </trans-unit>
+     <trans-unit id="SUBMIT">
+        <source>SUBMIT</source>
+        <target>Validate</target>
+     </trans-unit>
+     <trans-unit id="NO_RESULT">
+        <source>NO_RESULT</source>
+        <target>No results</target>
+     </trans-unit>
+     <trans-unit id="ADMIN">
+        <source>ADMIN</source>
+        <target>Administrator</target>
+     </trans-unit>
+     <trans-unit id="SIMPLE">
+        <source>SIMPLE</source>
+        <target>Simple</target>
+     </trans-unit>
+</body>
+</file>
+</xliff>

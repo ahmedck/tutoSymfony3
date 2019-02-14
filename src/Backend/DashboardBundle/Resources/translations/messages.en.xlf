@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file source-language="EN" target-language="en" datatype="plaintext" original="file.ext">  
+<body>
+      <trans-unit id="DASHBOARD">
+        <source>DASHBOARD</source>
+        <target>Dashboard</target>
+     </trans-unit>
+      <trans-unit id="VIEW_DETAILS">
+        <source>VIEW_DETAILS</source>
+        <target>View details</target>
+     </trans-unit>
+      <trans-unit id="NUMBER_OF_PRODUCTS">
+        <source>NUMBER_OF_PRODUCTS</source>
+        <target>Number of products</target>
+     </trans-unit>
+      <trans-unit id="NUMBER_OF_CATEGORIES">
+        <source>NUMBER_OF_CATEGORIES</source>
+        <target>Number of categories</target>
+     </trans-unit>
+      <trans-unit id="NUMBER_OF_USERS">
+        <source>NUMBER_OF_USERS</source>
+        <target>Number of users</target>
+     </trans-unit>
+
+</body>
+</file>
+</xliff>

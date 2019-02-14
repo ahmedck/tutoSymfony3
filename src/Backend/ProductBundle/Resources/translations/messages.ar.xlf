@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file source-language="EN" target-language="fr" datatype="plaintext" original="file.ext">
+<body>
+	<trans-unit id="PRODUCTS">
+        <source>PRODUCTS</source>
+        <target>المنتجات</target>
+     </trans-unit>
+	<trans-unit id="NAME">
+        <source>NAME</source>
+        <target>اسم</target>
+     </trans-unit>
+	<trans-unit id="PRICE">
+        <source>PRICE</source>
+        <target>السعر</target>
+     </trans-unit>
+	<trans-unit id="DESCRIPTION">
+        <source>DESCRIPTION</source>
+        <target>وصف</target>
+     </trans-unit>
+	<trans-unit id="ADD_PRODUCT">
+        <source>ADD_PRODUCT</source>
+        <target>إضافة منتج</target>
+     </trans-unit>
+	<trans-unit id="EDIT_PRODUCT">
+        <source>EDIT_PRODUCT</source>
+        <target>تعديل المنتج</target>
+     </trans-unit>
+
+</body>
+</file>
+</xliff>

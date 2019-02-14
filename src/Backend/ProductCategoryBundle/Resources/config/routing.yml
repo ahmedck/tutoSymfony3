@@ -1,0 +1,19 @@
+backend_product_category_homepage:
+    path:     /
+    defaults: { _controller: BackendProductCategoryBundle:Default:index }
+
+backend_product_category_add:
+    path:     /add
+    defaults: { _controller: BackendProductCategoryBundle:Default:add }
+
+backend_product_category_edit:
+    path:     /edit/{idProductCategory}
+    defaults: { _controller: BackendProductCategoryBundle:Default:edit }
+    requirements:
+        idProductCategory: '\d+'
+
+backend_product_category_delete:
+    path:     /delete/{idProductCategory}
+    defaults: { _controller: BackendProductCategoryBundle:Default:delete }
+    requirements:
+        idProductCategory: '\d+'

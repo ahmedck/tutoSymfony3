@@ -1,0 +1,19 @@
+backend_product_homepage:
+    path:     /
+    defaults: { _controller: BackendProductBundle:Default:index }
+
+backend_product_add:
+    path:     /add
+    defaults: { _controller: BackendProductBundle:Default:add }
+
+backend_product_edit:
+    path:     /edit/{idProduct}
+    defaults: { _controller: BackendProductBundle:Default:edit }
+    requirements:
+        idProduct: '\d+'
+
+backend_product_delete:
+    path:     /delete/{idProduct}
+    defaults: { _controller: BackendProductBundle:Default:delete }
+    requirements:
+        idProduct: '\d+'

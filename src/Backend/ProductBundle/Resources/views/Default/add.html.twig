@@ -1,0 +1,33 @@
+{% extends 'backend.html.twig' %}
+
+{% block body %}
+   <h2 class="mb-5">{% trans %}ADD_PRODUCT{% endtrans %}</h2>
+
+
+    <form class="col-md-5" action="{{ path('backend_product_add') }}" method="post">
+        <div class="form-group">
+            <label>{% trans %}NAME{% endtrans %}</label>
+            <input type="text" name="name" class="form-control"  >
+        </div>
+        <div class="form-group">
+            <label>{% trans %}DESCRIPTION{% endtrans %}</label>
+            <input type="text" name="description" class="form-control"  >
+        </div>
+        <div class="form-group">
+            <label>{% trans %}PRICE{% endtrans %}</label>
+            <input type="text" name="price" class="form-control"  >
+        </div>
+        <div class="form-group">
+            <label>{% trans %}CATEGORY{% endtrans %}</label>
+            <select name="id_product_category" class="form-control" >
+                {% for cat in categories %}
+                    <option value="{{ cat.idProductCategory }}">{{ cat.category }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="{% trans %}SUBMIT{% endtrans %}" class=" btn btn-primary">
+        </div>
+    </form>
+
+{% endblock %}

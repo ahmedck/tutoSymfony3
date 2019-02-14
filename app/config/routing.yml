@@ -1,0 +1,22 @@
+backend_user:
+    resource: "@BackendUserBundle/Resources/config/routing.yml"
+    prefix:   /backend/user
+
+backend_dashboard:
+    resource: "@BackendDashboardBundle/Resources/config/routing.yml"
+    prefix:   /backend
+
+backend_product_category:
+    resource: "@BackendProductCategoryBundle/Resources/config/routing.yml"
+    prefix:   /backend/productCategory
+
+backend_product:
+    resource: "@BackendProductBundle/Resources/config/routing.yml"
+    prefix:   /backend/product
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+logout:
+    path: /logout
